@@ -31,6 +31,7 @@ const print = (...messages: any) => console.log(...messages);
 $S$
 
 例：[ABC 260 A - A Unique Letter](https://atcoder.jp/contests/abc260/tasks/abc260_a)
+
 文字列として1行読み込むだけ。
 
 ```python:main.py
@@ -51,6 +52,7 @@ const S = input();
 $N$
 
 例：[ABC 256 A - 2^N](https://atcoder.jp/contests/abc256/tasks/abc256_a)
+
 整数を1つだけ読み込む。
 
 ```python:main.py
@@ -95,7 +97,7 @@ const [L1, R1, L2, R2] = input().split(" ").map(Number);
 
 ### 配列（リスト）
 
-$N$
+$N$  
 $A_1\ A_2\ \dots\ A_N$
 
 例：[ABC 256 B - Batters](https://atcoder.jp/contests/abc256/tasks/abc256_b)
@@ -119,10 +121,10 @@ const A = input().split(" ").map(Number);
 
 ### 縦方向の配列
 
-$N$
-$W_1$
-$W_2$
-$\vdots$
+$N$  
+$W_1$  
+$W_2$  
+$\vdots$  
 $W_N$
 
 例：[ABC 109 B - Shiritori](https://atcoder.jp/contests/abc109/tasks/abc109_b)
@@ -146,9 +148,9 @@ $W_i$ が数値なら `input()` を `+input()` にします。
 
 ### タプルの配列
 
-$N$
-$A_1\ B_1$
-$\vdots$
+$N$  
+$A_1\ B_1$  
+$\vdots$  
 $A_N\ B_N$
 
 例：[ABC 181 B - Trapezoid Sum](https://atcoder.jp/contests/abc181/tasks/abc181_b)
@@ -171,12 +173,15 @@ const AB: [number, number][] = [...Array(N)]
 ```
 
 型を適切につけるためにちょっと面倒なことをしています（もっとシンプルに書ける方法もあるかもしれません）。
+
 型が `number[][]` で構わない場合や、そもそもタプルの配列ではなく `配列A` と `配列B` で別々に管理する場合は、異なる書き方になるでしょう。
+
 私はなるべく `for` 文を使わない方法（関数型っぽい方法？）を好んでいます。
 
 ## 終わりに
 
 今まで競プロではほぼ Python しか使ってきませんでしたが、TypeScript も結構書き心地が良いです。
+
 Python と比べて、
 
 - 配列のメソッドチェーン（`map`、`filter` など）の最中に一時変数をつくることができる
