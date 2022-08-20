@@ -1,10 +1,9 @@
 ---
 title: 【AtCoder】TypeScript で Python の `input()` ライクな入力を実現する
-tags: 
+tags: AtCoder TypeScript Python 競技プログラミング 競プロ
 author: seijinrosen
 slide: false
 ---
-
 Python の `input()` のように、入力を1行ずつ読み込むような関数を実現する TypeScript のテンプレートを作成しました。
 
 ```typescript:main.ts
