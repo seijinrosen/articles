@@ -1,6 +1,6 @@
 ---
 title: TypeScript で Python の便利機能を模倣した関数を作成する
-tags: 
+tags: TypeScript Python 競技プログラミング AtCoder アルゴリズム
 author: seijinrosen
 slide: false
 ---
