@@ -21,6 +21,10 @@ const print = (...messages: any) => console.log(...messages);
 
 `TypeScript (3.8)` （AtCoder の 2022/08/21 現在のバージョン）で動作することを確認済みです。
 
+追記：`input()` 以外の Python ライクな機能も TypeScript で実装した、という記事を書きました。
+
+https://qiita.com/seijinrosen/items/3b99659e0434df09422f
+
 以下、Python での例と並べて代表的な使用例を記載します。
 
 ## 使用例
