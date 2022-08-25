@@ -40,6 +40,15 @@ const sum = (data: number[]) => data.reduce((a, b) => a + b);
 const mean = (data: number[]) => sum(data) / data.length;
 ```
 
+## zip() ＊配列2個まで
+
+```typescript:main.ts
+const zip = <T1, T2>(a: T1[], b: T2[]): [T1, T2][] =>
+  [...Array(Math.min(a.length, b.length))].map((_, i) => [a[i], b[i]]);
+```
+
+配列3個以上への対応や、`longest = true` とすることで `itertools.zip_longest` と同等の動きを実現するアイデアがあります。今後問題を解いていく中で必要になったら実装してみます。
+
 ## str.startswith(), str.endswith()
 
 ```typescript:main.ts
