@@ -1,6 +1,6 @@
 ---
 title: GitHub と VSCode とターミナルアプリでフォルダ・ファイルの並び順を合わせる
-tags: 
+tags: GitHub VSCode cli Python ls
 author: seijinrosen
 slide: false
 ---
@@ -16,7 +16,7 @@ GitHub では、
 
 の順にアイテムがソートされ、この順番は変更できないようです（公式での記載は見つかりませんでしたが、おそらくそう）。
 
-よって、GitHub の並び順と合わせることとします。
+よって、GitHub の並び順に合わせることとします。
 
 ## Visual Studio Code の設定
 
