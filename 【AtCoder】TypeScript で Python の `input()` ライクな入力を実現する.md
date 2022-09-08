@@ -173,6 +173,11 @@ const N = +input();
 const AB: [number, number][] = [...Array(N)]
   .map(() => input().split(" "))
   .map(([a, b]) => [+a, +b]);
+
+// 関数化したもの
+const inputPairArray = (n: number): [number, number][] =>
+  [...Array(n)].map(() => input().split(" ")).map(([a, b]) => [+a, +b]);
+// const AB = inputPairArray(N);
 ```
 
 型を適切につけるためにちょっと面倒なことをしています（もっとシンプルに書ける方法もあるかもしれません）。
@@ -180,6 +185,27 @@ const AB: [number, number][] = [...Array(N)]
 型が `number[][]` で構わない場合や、そもそもタプルの配列ではなく `配列A` と `配列B` で別々に管理する場合は、異なる書き方になるでしょう。
 
 私はなるべく `for` 文を使わない方法（関数型っぽい方法？）を好んでいます。
+
+#### 2022/09/09 追記
+
+型アサーションを使った方法を思いつきました。型アサーションの使用を許容できれば、こちらのほうがシンプルで拡張性が高いので良いと思います。
+
+```typescript:main.ts
+import { readFileSync } from "fs";
+let inputLinesIndex = 0;
+const inputLines = readFileSync("/dev/stdin", "utf8").split("\n");
+const input = () => inputLines[inputLinesIndex++];
+
+const N = +input();
+const AB = [...Array(N)].map(
+  () => input().split(" ").map(Number) as [number, number]
+);
+
+// 関数化したもの
+const inputPairArray = (n: number) =>
+  [...Array(n)].map(() => input().split(" ").map(Number) as [number, number]);
+// const AB = inputPairArray(N);
+```
 
 ## 終わりに
 
