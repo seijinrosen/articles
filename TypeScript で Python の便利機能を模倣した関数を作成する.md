@@ -36,7 +36,7 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Ma
 ## sum(), statistics.mean()
 
 ```typescript:main.ts
-const sum = (data: number[]) => data.reduce((a, b) => a + b);
+const sum = (data: number[]) => data.reduce((a, b) => a + b, 0);
 const mean = (data: number[]) => sum(data) / data.length;
 ```
 
