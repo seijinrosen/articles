@@ -105,6 +105,23 @@ const accumulate = (data: number[]) => {
 
 累積和の最初にゼロを入れるために、`const acc = [0, ...accumulate(arr)];` として使用することが多いです。
 
+## itertools.pairwise()
+
+```typescript:main.ts
+const zip = <T1, T2>(a: T1[], b: T2[]): [T1, T2][] =>
+  [...Array(Math.min(a.length, b.length))].map((_, i) => [a[i], b[i]]);
+const pairwise = <T>(array: T[]) => zip(array, array.slice(1));
+```
+
+`pairwise()` を使うとシンプルに書ける場面が多いので実装してみました。
+
+https://docs.python.org/ja/3/library/itertools.html#itertools.pairwise
+
+場合によっては、以下の点について注意が必要です。
+
+- 配列限定であること
+- メモリ効率・速度効率が、おそらくそんなに良くないこと
+
 ## range()
 
 ```typescript:main.ts
